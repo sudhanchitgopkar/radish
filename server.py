@@ -2,6 +2,7 @@ from flask import *
 import csv
 from datetime import date
 from pprint import pprint
+import request
 
 filename = "grocery_inventory_1.csv"
 
@@ -17,7 +18,22 @@ def ohome():
 
 @app.route('/data.html')
 def data():
-    return render_template("data.html")
+    if request.method == "POST":
+      name = request.form["Product Name"]
+      exp = request.form["Expiration Date"]
+      price = request.form["Price]
+      adict = {'Date Received': datetime.today(),
+              'Expiration Date': exp,
+              'Normal Total Price': '',
+              'Normal Unit Price': price,
+              'Product Name': name,
+              'Quantity': '',
+              'Sale Percentage': '',
+              'Sale Total Price': '',
+              'Sale Unit Price': '',
+              'Shipment ID': ''}
+    else:
+      return render_template("data.html")
 
 @app.route('/products.html')
 def products():
@@ -32,21 +48,21 @@ def login():
     else:
         return render_template("login.html")
 
-def join_csv(old, new):
-    biglist = []
-    with open(new) as fin:
-        reader = csv.DictReader(fin)
-        reader = [dict(i) for i in reader if dict(i)["ï»¿Shipment ID"]]
-        biglist += reader
+# def join_csv(old, new):
+#     biglist = []
+#     with open(new, encoding="utf8") as fin:
+#         reader = csv.DictReader(fin)
+#         reader = [dict(i) for i in reader if dict(i)["Shipment ID"]]
+#         biglist += reader
 
-    with open(old, "a", newline="") as fout:
-        writer = csv.DictWriter(fout, fieldnames=biglist[0].keys())
-        writer.writerows(biglist)
+#     with open(old, "a", newline="") as fout:
+#         writer = csv.DictWriter(fout, fieldnames=biglist[0].keys())
+#         writer.writerows(biglist)
 
-    return biglist
+#     return biglist
 
 def sale(file):
-    with open(file) as fin:
+    with open(file, encoding="utf-8") as fin:
         reader = csv.DictReader(fin)
         reader = [dict(i) for i in reader]
 
@@ -60,17 +76,19 @@ def sale(file):
         d = date(int(year), int(month), int(day))
 
         if (d - today).days <= 3:
-            up = round(float(i["Normal Unit Price"].strip())*0.5, 2)
-            tp = round(float(i["Normal Total Price"].strip())*0.5, 2)
-            biglist.append({"Shipment ID":i["ï»¿Shipment ID"], "Product Name":i["Product Name"], "Quantity":i["Quantity"], \
+            up = round(float(i["Normal Unit Price"].strip())*0.6, 2)
+            tp = round(float(i["Normal Total Price"].strip())*0.6, 2)
+            us = round(float(i["Normal Unit Price"].strip())*0.4, 2)
+            ts = round(float(i["Normal Total Price"].strip())*0.4, 2)
+            biglist.append({"Shipment ID":i["Shipment ID"], "Product Name":i["Product Name"], "Quantity":i["Quantity"], \
                             "Date Received":i["Date Received"], "Expiration Date":i["Expiration Date"], "Normal Unit Price":i["Normal Unit Price"], "Normal Total Price":i["Normal Total Price"], \
-                            "Sale Percentage":50, "Sale Unit Price":up, "Sale Total Price":tp, "Unit Savings":up, "Total Savings":tp})
+                            "Sale Percentage":50, "Sale Unit Price":up, "Sale Total Price":tp, "Unit Savings":us, "Total Savings":ts})
         elif (d - today).days <= 7:
             up = round(float(i["Normal Unit Price"].strip())*0.8, 2)
             tp = round(float(i["Normal Total Price"].strip())*0.8, 2)
             us = round(float(i["Normal Unit Price"].strip())*0.2, 2)
             ts = round(float(i["Normal Total Price"].strip())*0.2, 2)
-            biglist.append({"Shipment ID":i["ï»¿Shipment ID"], "Product Name":i["Product Name"], "Quantity":i["Quantity"], \
+            biglist.append({"Shipment ID":i["Shipment ID"], "Product Name":i["Product Name"], "Quantity":i["Quantity"], \
                             "Date Received":i["Date Received"], "Expiration Date":i["Expiration Date"], "Normal Unit Price":i["Normal Unit Price"], "Normal Total Price":i["Normal Total Price"], \
                             "Sale Percentage":20, "Sale Unit Price":up, "Sale Total Price":tp, "Unit Savings":us, "Total Savings":ts})
 

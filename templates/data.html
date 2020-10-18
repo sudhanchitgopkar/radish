@@ -9,7 +9,7 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
 
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
@@ -31,7 +31,7 @@ function closeNav() {
   <a href="index.html">Home</a>
   <a href="data.html">Data</a>
   <a href="products.html">Products</a>
-  <a href="#">Login</a>
+  <a href="login.html">Login</a>
 </div>
 
 <div id="main">
@@ -68,10 +68,10 @@ function closeNav() {
 </div>
     <p class = "manualText"> Or enter data manually</p>
       
-    <div class = "nameInput"> <input type="text" placeholder = "Product Name"> </div>
+    <div class = "nameInput"> <input type="text" placeholder = "Product Name" name="Product Name"> </div>
       
-    <div class = "expirationInput"> <input type="text" placeholder = "Expiration Date"> </div>
-    <div class = "idInput"> <input type="text" placeholder = "Product ID"> </div>
+    <div class = "expirationInput"> <input type="text" placeholder = "Expiration Date" name="Expiration Date"> </div>
+    <div class = "idInput"> <input type="text" placeholder = "Price" name="Price"> </div>
     <div class = "submitButton"> <p class = "submit">
       ↪
       </p> </div>

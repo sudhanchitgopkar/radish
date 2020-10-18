@@ -13,6 +13,7 @@ body {
 h1 {
   font-style: bold;
   color: #35382e;
+  font-size: 10px;
 }
 
 p {
@@ -235,26 +236,26 @@ a:active {
 
 .smallText {
   padding-top: 30px;
+  font-style: normal;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   color: white;
   width: 1000px;
   height: 100px;
-  font-style: italic;
   text-align: center;
 }
 
 .infoText {
   padding-top: 200px;
   font-size: 180%;
+  font-style: normal;
   color: white;
   width: 900px;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  font-style: italic;
   text-align: center;
 }
 
@@ -270,13 +271,13 @@ a:active {
 .infoText2 {
   padding-top: -100px;
   font-size: 180%;
+  font-style: normal;
   color: white;
   width: 900px;
   height: 200px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  font-style: italic;
   text-align: center;
 }
 
@@ -430,7 +431,15 @@ a:active {
 ul {
   position: absolute;
   top: 70px;
-  font-size: 25px;
+  font-size: 10px;
+  color: #1a1a1a;
+  list-style-type: none;
+}
+
+li {
+  position: absolute;
+  top: 70px;
+  font-size: 10px;
   color: #1a1a1a;
   list-style-type: none;
 }
@@ -447,3 +456,12 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+.login {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  float-left: 100px;
+  float-right: 100px;
+}
+

@@ -11,7 +11,7 @@
     <nav class="navbar">
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </nav>
-    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
     </head>
   
   <body style="background-image: blue;">
@@ -34,7 +34,7 @@
           </div>
         </nav>-->
 
-    <script>function openNav() {
+   <script>function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
 }
@@ -49,7 +49,7 @@ function closeNav() {
   <a href="index.html">Home</a>
   <a href="data.html">Data</a>
   <a href="products.html">Products</a>
-  <a href="#">Login</a>
+  <a href="login.html">Login</a>
 </div>
 
 <div id="main">
@@ -64,7 +64,7 @@ function closeNav() {
         </p>
         </h1>
         <div class="button">
-        <a href="data.html">Input some data </a>
+        <a href="data.html">Input Some Data </a>
 
         </div>
         <h1 class="infoText">

@@ -15,7 +15,7 @@
         crossorigin="anonymous"
       />
     </nav>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
   </head>
   <script>
     function openNav() {
@@ -36,7 +36,7 @@
     <a href="index.html">Home</a>
     <a href="data.html">Data</a>
     <a href="products.html">Products</a>
-    <a href="#">Login</a>
+    <a href="login.html">Login</a>
   </div>
 
   <div id="main">
@@ -49,33 +49,58 @@
   <h1 class="welcome">
     Products
   </h1>
-  
+
     <div id="container">
       <div class="productBack">
         <div class="productHeader expiration">
           <p>
             Expires
           </p>
+          <ul>
+            {% for x in exp %}
+                <li style="color:#ededed;font-size:20px; position:relative; left:-20px"> {{x}} </li>
+            {% endfor %}
+          </ul>
         </div>
         <div class="productHeader name">
           <p>
             Name
           </p>
+          <ul>
+            {% for x in name %}
+                <li style="color:#ededed;font-size:20px;"> {{x}} </li>
+            {% endfor %}
+          </ul>
         </div>
         <div class="productHeader oldPrice">
           <p>
             Old Price
           </p>
+          <ul>
+            {% for x in oprice %}
+                <li style="color:#b33d47;font-size:20px;font-style:regular"> ${{x}} </li>
+            {% endfor %}
+          </ul>
         </div>
         <div class="productHeader newPrice">
           <p>
             New Price
           </p>
+          <ul>
+            {% for x in nprice %}
+                <li style="color:#558a5b;font-size:20px;"> ${{x}} </li>
+            {% endfor %}
+          </ul>
         </div>
         <div class="productHeader savings">
           <p>
             Savings
           </p>
+          <ul>
+            {% for x in save %}
+                <li style="color:#558a5b;font-size:20px;"> -${{x}} </li>
+            {% endfor %}
+          </ul>
         </div>
       </div>
     </div>

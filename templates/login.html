@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <h1 class="welcome">
+      Currently Under Construction!
+    </h1>
+  </head>
+  <body>
+    
+      <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+      >&times;</a
+    >
+    <a href="index.html">Home</a>
+    <a href="data.html">Data</a>
+    <a href="products.html">Products</a>
+    <a href="login.html">Login</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">
+      &#9776;
+      <!--Open Sidebar-->
+    </button>
+  </div>
+    <div class="login">
+      <form id="loginForm" method="post" action="">
+        <label for="un">Username: </label
+        ><input
+          type="text"
+          id="un"
+          class="textInput"
+          name="logusername"
+          required
+        /><br /><br />
+
+        <label for="pwd">Password: </label
+        ><input
+          type="password"
+          id="pwd"
+          class="textInput"
+          name="logpassword"
+          required
+        /><br />
+        <br />
+        <input type="submit" value="Log In" />
+      </form>
+    </div>
+  </body>
+</html>
