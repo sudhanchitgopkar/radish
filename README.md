@@ -38,6 +38,6 @@ Technologies Used:
 
 ## What's next for rad(ish)
 
-rad(ish) wasn't built by the best coders in the world. It's not the prettiest app. It's not the most functional.
-But we did give it everything we had. Going forward, we hope to continue developing and updating rad(ish) as the
-rad(ish) team gets more resources, more experience, and (hopefully) more sleep.
+We have begun to create a login page for employees to add a layer of security, but the database is not fully implemented yet. rad(ish) has many new features yet to come - we hope you'll stick around!
+
+
