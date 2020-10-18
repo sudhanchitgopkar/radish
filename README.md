@@ -1,8 +1,5 @@
-# Welcome to Glitch
-
-## Your Project
-
-rad(ish)
+# Welcome to [rad(ish)](https://radish.glitch.me)
+[rad(ish)](https://radish.glitch.me)
 Contributors:  
 Vikrant Bathala, Marylyn Chen, Sudhan Chitgopkar, Joanna Zheng
 
