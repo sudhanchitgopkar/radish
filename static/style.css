@@ -234,6 +234,11 @@ a:active {
   border-radius: 15px;
 }
 
+.right {
+  position:relative;
+  margin-left:auto
+}
+
 .smallText {
   padding-top: 30px;
   font-style: normal;
@@ -247,7 +252,7 @@ a:active {
 }
 
 .infoText {
-  padding-top: 200px;
+  padding-top: 70px;
   font-size: 180%;
   font-style: normal;
   color: white;
@@ -465,3 +470,27 @@ footer {
   float-right: 100px;
 }
 
+.button2 a:link,
+a:visited {
+  position: relative;
+  padding: 20px;
+  font-size: 30px;
+  background-color: #c7d998;
+  text-align: center;
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  text-decoration: none;
+  color: white;
+  background: #b7c4a1;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  box-shadow: 0px 4px 4px #91a37a, 2px 2px 16px #dbd5a4;
+  border-radius: 15px;
+}
+
+.button2 a:hover,
+a:active {
+  background: #aac48b;
+  box-shadow: inset 0px 4px 4px #649173, -2px -2px 16px #dbd5a4;
+  border-radius: 15px;
+}

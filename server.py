@@ -2,7 +2,6 @@ from flask import *
 import csv
 from datetime import date
 from pprint import pprint
-import request
 
 filename = "grocery_inventory_1.csv"
 
@@ -21,7 +20,7 @@ def data():
     if request.method == "POST":
       name = request.form["Product Name"]
       exp = request.form["Expiration Date"]
-      price = request.form["Price]
+      price = request.form["Price"]
       adict = {'Date Received': datetime.today(),
               'Expiration Date': exp,
               'Normal Total Price': '',
@@ -32,6 +31,9 @@ def data():
               'Sale Total Price': '',
               'Sale Unit Price': '',
               'Shipment ID': ''}
+      with open(filename, "a", newline="") as fout:
+        writer = csv.DictWriter(fout, fieldnames=adict.keys())
+        writer.writerow(adict)
     else:
       return render_template("data.html")
 
