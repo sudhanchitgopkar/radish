@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to Store</title>
+    <nav class="navbar">
+      <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+      />
+    </nav>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+  </script>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+      >&times;</a
+    >
+    <a href="index.html">Home</a>
+    <a href="data.html">Data</a>
+    <a href="products.html">Products</a>
+    <a href="#">Login</a>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">
+      &#9776;
+      <!--Open Sidebar-->
+    </button>
+  </div>
+  <body>
+    <div id="container">
+      <div class="productBack">
+        <div class="productHeader expiration">
+          <p>
+            Expiration Date
+          </p>
+        </div>
+        <div class="productHeader name">
+          <p>
+            Name
+          </p>
+        </div>
+        <div class="productHeader oldPrice">
+          <p>
+            Old Price
+          </p>
+        </div>
+        <div class="productHeader newPrice">
+          <p>
+            New Price
+          </p>
+        </div>
+        <div class="productHeader savings">
+          <p>
+            Savings
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+<body style="background-image: blue;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/data.html">Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/product.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+    <h2 class="productHeader">
+      No Products Available
+    </h2>
+-->

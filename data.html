@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    
+  </head>
+  <body>
+    <script>function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}</script>
+    <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Home</a>
+  <a href="data.html">Data</a>
+  <a href="products.html">Products</a>
+  <a href="#">Login</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; <!--Open Sidebar--></button>
+</div>
+  <!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/data.html">Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/product.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>-->
+    <div class="mainRect"> 
+      <div class = "userSpace">
+      </div>
+    <p class = "connectText"> Connect your food database here  </p>
+      
+    <div class = "dataConnect">
+  <input type="file" id="myfile" name="myfile" style ="opacity:0%" placeholder = "Click to add file" accept=".csv,.txt"> 
+</div>
+    <p class = "manualText"> Or enter data manually</p>
+      
+    <div class = "nameInput"> <input type="text" placeholder = "Product Name"> </div>
+      
+    <div class = "expirationInput"> <input type="text" placeholder = "Expiration Date"> </div>
+    <div class = "idInput"> <input type="text" placeholder = "Product ID"> </div>
+    <div class = "submitButton"> <p class = "submit">
+      ↪
+      </p> </div>
+      </div>
+    <img class = "image2" src="https://cdn.glitch.com/e8a2e81f-aedd-4746-91ec-32de06442496%2FUntitled-Artwork.png?v=1602974962492" alt="radish2">
+    <img class = "image3" src="https://cdn.glitch.com/e8a2e81f-aedd-4746-91ec-32de06442496%2FUntitled-Artwork.png?v=1602974962492" alt="radish2">
+  </body>
+</html>
