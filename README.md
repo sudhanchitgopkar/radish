@@ -25,6 +25,9 @@ Technologies Used:
 • CSS
 • Javascript
 
+## Design Mockups
+Design mockups and complete devpost available [here](https://devpost.com/software/rad-ish)
+
 ## Challenges we ran into
 
 • Integrating Python-based algorithm into the web development application, Glitch
